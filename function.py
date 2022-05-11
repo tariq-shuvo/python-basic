@@ -1,6 +1,10 @@
 # A function is a block of code which only runs when it is called.
-from unittest import result
 
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
 
 def my_function(name):
     print("Hello "+ name)
