@@ -30,17 +30,32 @@ print(type(k))
 str_message = "Hello Bangladesh"
 int_value = 20
 float_value = 20.5
-complex_value = 1j
+# complex_value.real (10) complex_vlue.imag (1j) 
+complex_value = 10 + 1j # real(10) + imagenary(1j)
+
+# list of data which is changeble and traversed by index number
 list_value = ["apple", "banana", "cherry", "apple"]
+
+# list of data which can't be changed just can be added new data into the tuple
 tuple_value = ("apple", "bannana", "cherry", "apple")
+
+# list of data which avoid repeatation able to do union, intersection, differance, add, update, remove, discard
 set_value = {"apple", "bannana", "cherry", "apple"}
+
+# list of data represent as set but its immutable
 frozen_set_value = frozenset({"apple", "bannana", "cherry", "apple"})
-range_value = range(6)
+
+range_value = range(6) # range(start, end, interval) this will create a list
 dict_value = {"name": "jhon", "age": 25}
 bool_value = True
+
+# byte value range must be 0 to 255 value can't be modified(immutable)
 byte_value = b"Hello"
+# byte array value range must be 0 to 255 value can be modified(mutable)
 byte_array_value = bytearray(5)
+# get memory value of byte value which can be directly visited value using memory view like memoryview_value.obj which will be effective for high performance  
 memoryview_value = memoryview(bytes(5))
+
 none_value = None
 multi_line_str = """
 Text Type:	str
