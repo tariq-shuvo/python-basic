@@ -2,24 +2,36 @@
 # List is a collection which is ordered and changeable. Allows duplicate members.
 
 myList = ["apple", "banana", "cherry"]
-
+print(myList, "list elements are shown. Start For Loop ...")
 # for loop
 for x in myList:
     print(x)
-    
-for i in range(len(myList)):
-    print(i)    
 
+print("For loop has been completed. Start For Loop with range list ...")
+
+for i in range(len(myList)):
+    print(i)  
+
+print("For loop with range array has been completed. Start For Loop with range (start, end, interval) list ...")
+# create range list and print out
+for j in range(10, 20, 2):
+    print(j)  
+
+print("For loop with range(start, end, interval) array has been completed. Start while loop with list")
 # while loop
 i = 0
 while i < len(myList):
-    print(i)
+    print('index', i, 'value is ', myList[i])
     i = i + 1 
-    
-# list comprehension
+
+print("While loop has been completed.")    
+# list comprehension to make custom iteration [output expression, input sequence, conditional logic]
 newList = [x for x in myList if "a" in x]
 print(newList)
-     
+# even square list using comprehension
+newEvenSquareList = [i**2 for i in range(20) if i % 2 == 0]
+print(newEvenSquareList)
+
 print(myList)
 print(myList[0]) #accessing data
 print(myList[-1]) #accessing data
@@ -45,9 +57,11 @@ pop()	Removes the element at the specified position
 remove()	Removes the item with the specified value
 reverse()	Reverses the order of the list
 sort()	Sorts the list
-
+del array[index] Use to delete element from list
+len Used to find out the length of an array
 """
 myList.clear()
+print(myList)
 myList.append("orange")
 print(myList)
 print(anotherList.count("berry"))
