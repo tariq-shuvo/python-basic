@@ -33,3 +33,11 @@ data1 = "apple"
 
 print(data1 in list1)
 print(data1 not in list1)
+
+# what is the difference between == and is operator. Ans. is operatior is work on based on variable and == operator work on value
+a = [10, 20, 22, 25]
+b = a
+c = a[:]
+print("b is a", b is a) # True
+print("c is a", c is a) # False
+print("c = a", c == a) # True
