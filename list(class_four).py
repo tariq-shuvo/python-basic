@@ -3,6 +3,7 @@
 
 myList = ["apple", "banana", "cherry"]
 print(myList, "list elements are shown. Start For Loop ...")
+
 # for loop
 for x in myList:
     print(x)
@@ -10,14 +11,16 @@ for x in myList:
 print("For loop has been completed. Start For Loop with range list ...")
 
 for i in range(len(myList)):
-    print(i)  
+    print(f"{i} = {myList[i]}")  
 
 print("For loop with range array has been completed. Start For Loop with range (start, end, interval) list ...")
+
 # create range list and print out
 for j in range(10, 20, 2):
     print(j)  
 
 print("For loop with range(start, end, interval) array has been completed. Start while loop with list")
+
 # while loop
 i = 0
 while i < len(myList):
@@ -25,9 +28,11 @@ while i < len(myList):
     i = i + 1 
 
 print("While loop has been completed.")    
+
 # list comprehension to make custom iteration [output expression, input sequence, conditional logic]
 newList = [x for x in myList if "a" in x]
-print(newList)
+print(f"list comprehension {newList}")
+
 # even square list using comprehension
 newEvenSquareList = [i**2 for i in range(20) if i % 2 == 0]
 print(newEvenSquareList)
@@ -42,8 +47,9 @@ if "apple" in myList:
     
 anotherList = list(("plam", "grap", "berry", "berry"))
 print(anotherList)
-anotherList[1:3] = ["watermalon"]
+anotherList[1:3] = ["watermalon"] # replacing value of array
 print(anotherList)
+
 # List Methods
 """
 append()	Adds an element at the end of the list
@@ -61,26 +67,27 @@ del array[index] Use to delete element from list
 len Used to find out the length of an array
 """
 myList.clear()
-print(myList)
+print(f"clear() {myList}")
 myList.append("orange")
-print(myList)
-print(anotherList.count("berry"))
+print(f"append() {myList}")
+print(f"count() {anotherList.count('berry')}")
 x = myList.copy()
-print(x)
+print(f"copy() {x}")
 myList.extend(anotherList)
-print(myList)
-print(myList.index("berry"))
+print(f"extend() myList with anotherList {myList}")
+print(f"index() {myList.index('berry')}")
 myList.insert(len(myList), "cherry")
-print(myList)
+print(f"inset() {myList}")
 anotherList.pop()
-print(anotherList)
+print(f"pop() {anotherList}")
 anotherList.remove("plam")
-print(anotherList)
+print(f"remove() {anotherList}")
 myList.reverse()
-print(myList)
+print(f"reverse() {myList}")
 
 cars = ['Ford', 'BMW', 'Volvo']
 cars.sort(reverse=True) # reverse Optional. reverse=True will sort the list descending. Default is reverse=False
+print(f"sort() {cars}")
 
 # A function that returns the length of the value:
 def myFunc(e):
@@ -89,6 +96,8 @@ def myFunc(e):
 cars = ['Ford', 'Mitsubishi', 'BMW', 'VW']
 
 cars.sort(key=myFunc)
+
+print(f"as key function apply in sort() {cars}")
 
 # A function that returns the 'year' value:
 def myFunc(e):
@@ -103,5 +112,4 @@ cars = [
 
 cars.sort(reverse=True, key=myFunc)
 
-print(cars)
-print(len(cars))
+print(f"Reverse True and as key function apply in sort() {cars}")
